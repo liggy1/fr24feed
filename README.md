@@ -20,11 +20,10 @@ docker run -d \
 liggy1/fr24feed --fr24key={Flightradar24 signup key}
 ```
 
-The ```--privileged``` option will grant access to all host devices. This might not be the desired behaviour, instead you can use ```--device=/dev/bus/usb/**xxx**/**yyy**```
+The ```--privileged``` option will grant access to all host devices. This might not be the desired behaviour, instead you can use ```--device=/dev/bus/usb/xxx/yyy```
 In order to find the correct values for **xxx** and **yyy** run ```lsusb```:
-```
-Bus **001** Device **002**: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T
-```
+> Bus **001** Device **002**: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T
+
 For this sample output you would replace xxx with 001 and yyy with 002
 
 In order to access your business subscription, [register here](https://www.flightradar24.com/premium/signup?account=free) for an account using the email address your provided when you signed up.
